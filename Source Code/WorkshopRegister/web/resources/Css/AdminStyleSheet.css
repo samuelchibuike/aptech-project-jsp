@@ -1,0 +1,173 @@
+﻿/* CSS Document */
+*
+{
+	padding:0px;
+	margin:0px;
+}
+body
+{	
+    width:100%;
+	margin:0px auto 0px auto;	
+	font-family: Tahoma, Arial, Verdana, Helvetica sans-serif;	
+	background-image:url(../Images/b_body.png);
+	font-size:11px;
+}
+  
+#container_header
+{  
+  position: absolute; 
+  z-index: 1; 
+  width: 300px; 
+  margin: 180px;       
+}
+
+#header
+{
+  position:fixed;
+  z-index: 2;
+  top: -1px; 
+  left: 0%; 
+  width: 100%; 
+  height:40px;
+  /*background: red;*/
+  background-image:url(../Images/color1.png);
+  z-index:2;
+}
+
+#system_name
+{    
+    float:left;
+    padding:10px 50px;    
+    color:White;
+    font-weight:bold;
+    font-size:20px;
+    z-index:3;
+}
+
+#logout
+{
+    float:right;
+    padding:10px 50px;
+}
+
+.logout
+{
+    float:right;
+    width:85px;
+	height:18px;
+	line-height:18px;	
+	text-align:center;	
+	color:White;
+	font-weight:bold;
+    background:url(../Images/logout.png) no-repeat top left;
+    display:inline-block;
+}
+
+#logout a:hover
+{
+    color:Black;
+}
+
+.changepass
+{
+    float:right;
+    width:120px;
+	height:18px;
+	line-height:18px;	
+	text-align:center;
+	color:White;
+	font-weight:bold;
+    background:url(../Images/changepassicon.jpg) no-repeat top left;
+    display:inline-block;
+}
+
+.hello
+{
+    float:left;
+    width:150px;
+	height:18px;
+	line-height:18px;	
+	text-align:center;
+	color:White;
+	font-weight:bold;    
+    display:inline-block;
+}
+
+.ui
+{
+    float:right;
+    width:170px;
+	height:18px;
+	line-height:18px;	
+	text-align:center;
+	color:White;
+	font-weight:bold;
+    background:url(../Images/edit_profile.png) no-repeat top left;
+    display:inline-block;
+}
+ 
+#uc_menu
+{    
+    width:100%;               
+    height:40px;   
+    background-image:url(../Images/b_menu.png);    
+    margin-bottom:15px;
+}
+
+#container_menu
+{    
+    width:1150px;      
+    margin:0px auto 0px auto;             
+}
+
+#container_main_header
+{
+    width:1150px;     
+    height:20px; 
+    margin:0px auto 0px auto;     
+    background-image:url(../Images/m_header.png);            
+}
+
+#container_main_center
+{
+    width:1150px;         
+    /*height:1000px;    */
+    margin:0px auto 0px auto;         
+    background-image:url(../Images/m_center.png);            
+}
+
+#container_main_bottom
+{
+    width:1150px;     
+    height:30px;      
+    margin:0px auto 0px auto;         
+    background-image:url(../Images/m_bottom.png);            
+}
+
+.font1
+{
+    font-family: Tahoma, Arial, Verdana, Helvetica sans-serif;	
+    color:Black;    
+    font-weight:bold;
+}
+
+.tbx_search1
+{    
+    width:200px;
+	color :#747862;
+	height:20px;
+	border:0;
+	padding:0px 0px;	
+	background-image:url(../Images/i_tbx_search.png);
+}
+
+.bt_search1
+{
+    position:absolute;
+    background-image:url(../Images/i_bt_search.png) ;
+    border:0;
+    padding:0px 0px;	
+    color:White;
+    width:29px;         
+    height:20px;
+}
