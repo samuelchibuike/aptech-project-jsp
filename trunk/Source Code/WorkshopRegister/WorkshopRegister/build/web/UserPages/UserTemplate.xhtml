@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />         
+        <link rel="stylesheet" type="text/css" href="../resources/Css/UserStyleSheet.css" />     
+        <link rel="stylesheet" type="text/css" href="../resources/Css/nivo-slider.css" />     
+        <link rel="stylesheet" type="text/css" href="../resources/Css/nivo.css" />     
+        <script type="text/javascript" src="../resources/Javascript/jquery.js"/>
+        <style type="text/css">
+		#wrapper{
+                    float:left;
+                    width:718px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+		}
+	</style>
+        
+        
+        <script type="text/javascript">
+            $(document).ready(function () {
+                
+                $("#left_menu_title").hover(function () {
+                    $("#left_menu_title").css("background-image", "url(../resources/Images/i_left_menu_header_hover.png)");
+                },
+                function () {
+                    $("#left_menu_title").css("background-image", "url(../resources/Images/i_left_menu_header.png)");
+                });
+                
+            });
+        </script>        
+        <title>User</title>
+        
+    </h:head>
+
+    <h:body>                    
+            <div id="dropdow">
+                <div id="container_header">
+
+                    <div id="header">
+                        <div id="l_header">
+                            <a href="../Administrator/Login.jsp" title="Home">Home</a>
+                            <a href="../Administrator/Index.xhtml" title="About">About</a>
+                            <a href="../Administrator/AdminTemplate.xhtml" title="Contact">Contact</a>      
+                        </div>
+                        <div id="r_header">
+                            <a href="Register.xhtml" title="Register">Register</a>
+                        </div>
+                    </div>
+                </div>             
+            </div>
+            
+            <div id="container">
+                <div id="container_header_logo">
+                <div id="header_logo_left">
+                    <!--<img src="../resources/Images/logo web.png" alt="" />-->
+                    <img src="../resources/Images/Workshop.jpg" alt="" />
+                    
+                </div>
+                <div id="header_logo_search" style="margin-top: 130px;" >                                                                                     
+                    <div id="1" style="position:relative;float: right">                        
+                        <input type="text" class="tbx_search" placeholder="Input Text Search Here" title="Input Text Here"/>
+                        <input type="submit" class="bt_search" title="Click here to search"/>                         
+                    </div> 
+                </div>
+            </div>     
+            
+            <div id="container_main">            
+                <div id="left_menu">
+                    <div id="left_menu_title" style="cursor:pointer;">                        
+                    </div>          
+                    <div id="left_menu_content">
+                        <table style="width:180px;" border="0">
+                            <tr>
+                                <td width="32">
+                                    <img alt="" src="../resources/Images/1.PNG" />
+                                </td>
+                                <td>
+                                    <a href="../Administrator/Index.xhtml"><strong>Workshop</strong><hr /></a>
+                                </td>
+                            </tr>
+                             
+                           
+                            <tr>
+                                <td width="32">
+                                    <img alt="" src="../resources/Images/2.png" />
+                                </td>
+                                <td>
+                                    <a href="../Administrator/Index.xhtml"><strong>Workshop</strong><hr/></a>    
+                                </td>
+                            </tr>
+                             
+                            <tr>
+                                <td width="32">
+                                    <img alt="" src="../resources/Images/3.png" />
+                                </td>
+                                <td>
+                                    <a href="../Administrator/Index.xhtml"><strong>Workshop</strong><hr /></a>    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="32">
+                                    <img alt="" src="../resources/Images/4.png" />
+                                </td>
+                                <td>
+                                    <a href="../Administrator/Index.xhtml"><strong>Workshop</strong><hr /></a>    
+                                </td>
+                            </tr>
+                            
+                        </table>                      
+                    </div>                    
+
+                    <div class="divAdvertise">                        
+                    </div>
+                </div>
+                
+                <div id="main">
+                    <div id="top_menu">
+                        <a href="../Administrator/Index.xhtml">Workshop</a>
+                        <a href="../Administrator/Index.xhtml">Workshop</a>
+                        <a href="../Administrator/Index.xhtml">Workshop</a>
+                        <a href="../Administrator/Index.xhtml">Workshop</a>
+                        <a href="../Administrator/Index.xhtml">Workshop</a>                        
+                    </div>
+                    <div id="slide_show">
+                        <div id="wrapper">            
+                            <div class="slider-wrapper theme-default">
+                                <div id="slider" class="nivoSlider">
+                                    <img src="../resources/Images/mothers-day-cards-banner.jpg" alt="" />
+                                    <img src="../resources/Images/mobile-commerce-banner.jpg" alt="" />
+                                    <img src="../resources/Images/express-mail-frb-banner.jpg" alt="" />
+                                    <img src="../resources/Images/free-package-pickup-banner.jpg" alt="" />
+                                    <img src="../resources/Images/mobile-commerce-banner.jpg" alt="" />      
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript" src="../resources/Javascript/jquery-1.7.1.min.js"></script>
+                        <script type="text/javascript" src="../resources/Javascript/jquery.nivo.slider.js"></script>
+                        <script type="text/javascript">
+                        $(window).load(function() {
+                                $('#slider').nivoSlider({
+                                    effect: 'random',
+                                    slices:8,
+                                    animSpeed:900, //Slide transition speed
+                                    pauseTime:2500,
+                                    startSlide:0, //Set starting Slide (0 index)
+                                    directionNav:true
+                                });
+                            });
+                        </script>                                                                                       
+                    </div>                     
+                    <div id="m_content">                        
+                           <ui:insert name="content">
+                               Chạy Dân Đi Em :))
+                           </ui:insert>                         
+                    </div>
+                </div>  
+               
+            </div>                   
+        </div>              
+    </h:body>
+
+</html>
