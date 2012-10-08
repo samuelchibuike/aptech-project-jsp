@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <body>
+
+        <ui:composition template="./UserTemplate.xhtml">
+
+            <ui:define name="content">                               
+                <fieldset>
+                    <legend>Information Of Account</legend>
+                    <table width="100%" border="0" cellpadding="3" cellspacing="4">
+                        <tr>
+                            <td align="right" width="300px">Account ID</td>
+                            <td><h:inputText value=""/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Password</td>
+                            <td><h:inputSecret value="" /></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Confirm Password</td>
+                            <td><h:inputSecret value="" /></td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset>
+                    <legend>Information of Person</legend>
+                    <table width="100%" border="0" cellpadding="3" cellspacing="4">
+                        <tr>
+                            <td align="right" width="300px">Email</td>
+                            <td><h:inputText value="" /></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Birthday</td>
+                            <td><h:inputText value="" /></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Tel</td>
+                            <td><h:inputText value="" /></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Address</td>
+                            <td><h:inputText value="" /></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Job</td>
+                            <td><h:inputText value="" /></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Degree</td>
+                            <td><h:inputText value="" /></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Job Address</td>
+                            <td><h:inputText value="" /></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Password</td>
+                            <td><h:inputText value="" /></td>
+                        </tr>
+                        <tr>
+                            <td align="right"></td>
+                            <td>
+                                <h:button value="Register" />
+                                <h:button value="Register" />
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                    
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

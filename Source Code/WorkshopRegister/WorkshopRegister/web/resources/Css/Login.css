@@ -1,0 +1,117 @@
+﻿*
+{
+    margin:0px;
+    padding:0px;
+}
+
+body 
+{
+    width:1000px;    
+    margin:0px auto 0px auto;    
+    font-family: tahoma, verdana, Arial;
+    font-size: 11px;
+    /*
+    background-image:url("../Image/form_Login.png")no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;  
+    background-color:#6161dd;
+    text-shadow:5px 5px 5px #333;        
+    */
+}
+
+#container_header
+{
+    width:100%;
+    height:120px;    
+    background-color:#6161dd;
+    padding-top:10px;
+    z-index:1;
+}
+
+#header
+{
+    width:90%;
+    margin:0px auto 0px auto;
+    z-index:2;
+}
+
+#header_icon
+{
+    float:left;
+}
+ 
+#header_text
+{
+    float:left;
+    font-family: tahoma, verdana, Arial;
+    margin-top:30px;
+    text-shadow:5px 5px 5px #333;    
+    font-size:24px;
+    font-weight:bold;
+    color:#73FFFD;    
+}
+
+#container_main
+{     
+    width:100%;
+    height:410px;        
+    background-color:silver;
+    padding-top:10px;
+    border-top-width:5px;
+    border-bottom-width:5px;
+    border-style:solid none solid none;        
+    border:10px none 10px none;
+    border-bottom-color:Red;
+    border-top-color:Red;
+    z-index:3;
+}
+
+#main
+{
+    width:90%;
+    height:400px;
+    margin:0px auto 0px auto;
+    background-color:White;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    z-index:4;
+}
+
+#main #icon_left
+{
+    float:left;    
+    width:42%;             
+    height:340px;
+    padding:45px 0px 0px 10px;    
+    margin:0px auto 0px auto;    
+    z-index:5;    
+}
+#main #right_login_form
+{
+    float:left;     
+    width:400px;    
+    height:300px;            
+    margin:30px auto auto auto;
+    background-repeat:no-repeat;    
+    background-image:url("../Images/form_Login.png");
+    z-index:6;
+}
+
+.text
+{
+    font-size:12px;
+}
+#container_footer
+{
+    width:100%;
+    height:100px;
+    background-color:#6161dd;
+    z-index:99;
+}
+
+#font1{
+    padding: 0px;
+    font-weight: bolder;        
+}
