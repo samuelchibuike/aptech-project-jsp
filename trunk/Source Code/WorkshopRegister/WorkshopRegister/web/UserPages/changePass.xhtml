@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+    
+    <script type="text/javascript">
+    $(function() {
+        $("#datepicker").datepicker();
+    });
+    </script>
+
+    <body>
+
+        <ui:composition template="./UserTemplate.xhtml">
+
+            <ui:define name="content">
+                <h:form>
+                    <table width="100%" border="0" cellpadding="3" cellspacing="4">
+                        <tr>
+                            <td align="right" width="300px">Enter Old Pass</td>
+                            <td>
+                                <h:inputSecret value="#{account.acc.APass}" />                                
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td align="right" width="300px">Enter New Pass</td>
+                            <td>
+                                <h:inputSecret value="#{account.newPass}" id="datepicker"/>                                   
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td align="right" width="300px"></td>
+                            <td>
+                                <h:outputLabel value="#{account.message}"/>
+                                <h:commandButton action="#{account.changePass()}" value="Change"/>
+                                <input type="reset" value="Cancel"/>
+                            </td>                            
+                        </tr>
+                        
+                    </table>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>
