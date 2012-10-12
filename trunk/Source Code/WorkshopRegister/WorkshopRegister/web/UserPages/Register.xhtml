@@ -1,79 +1,82 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
+<html xmlns="http://www.w3.org/1999/xhtml"      
       xmlns:ui="http://java.sun.com/jsf/facelets">
-
+    <script type="text/javascript">
+        function checkForm(){
+            alert("checkform");
+            return false;
+        }
+    </script>   
     <body>
-
-        <ui:composition template="./UserTemplate.xhtml">
-
+        <ui:composition template="./UserTemplate.xhtml"
+                        xmlns:p="http://primefaces.org/ui"
+                        xmlns:h="http://java.sun.com/jsf/html">
             <ui:define name="content">                               
-                <fieldset>
-                    <legend>Information Of Account</legend>
-                    <table width="100%" border="0" cellpadding="3" cellspacing="4">
-                        <tr>
-                            <td align="right" width="300px">Account ID</td>
-                            <td><h:inputText value=""/></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Password</td>
-                            <td><h:inputSecret value="" /></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Confirm Password</td>
-                            <td><h:inputSecret value="" /></td>
-                        </tr>
-                    </table>
-                </fieldset>
-                <fieldset>
-                    <legend>Information of Person</legend>
-                    <table width="100%" border="0" cellpadding="3" cellspacing="4">
-                        <tr>
-                            <td align="right" width="300px">Email</td>
-                            <td><h:inputText value="" /></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Birthday</td>
-                            <td><h:inputText value="" /></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Tel</td>
-                            <td><h:inputText value="" /></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Address</td>
-                            <td><h:inputText value="" /></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Job</td>
-                            <td><h:inputText value="" /></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Degree</td>
-                            <td><h:inputText value="" /></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Job Address</td>
-                            <td><h:inputText value="" /></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Password</td>
-                            <td><h:inputText value="" /></td>
-                        </tr>
-                        <tr>
-                            <td align="right"></td>
-                            <td>
-                                <h:button value="Register" />
-                                <h:button value="Register" />
-                            </td>
-                        </tr>
-                    </table>
-                </fieldset>
+                <h:form>       
+                    <script type="text/javascript">        
+                        $(function() {
+                            $( "#datepicker" ).datepicker();
+                        });
+                    </script> 
+                    <input type="text" id="datepicker"/>
+                     
+                    <fieldset>
+                        <legend>Information Of Account</legend>
+                        <table width="100%" border="0" cellpadding="2" cellspacing="4">                        
+                            <tr>
+                                <td align="right" width="300px">Account ID</td>
+                                <td> 
+                                    <h:inputText value="#{account.acc.AName}"/>                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">Password</td>
+                                <td><h:inputText value="#{account.acc.APass}"/></td>
+                            </tr>                             
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Information Of User</legend>
+                        <table width="100%" border="0" cellpadding="2" cellspacing="4">                        
+                            <tr>
+                                <td align="right" width="300px">Email</td>
+                                <td><h:inputText value="#{account.acc.AEmail}" /></td>
+                            </tr>
+                            <tr>
+                                <td align="right">Tel</td>
+                                <td><h:inputText value="#{account.acc.ATel}" /></td>
+                            </tr>
+                            <tr>
+                                <td align="right">Address</td>
+                                <td><h:inputText value="#{account.acc.AAdd}" /></td>
+                            </tr>
+                            <tr>
+                                <td align="right">Job</td>
+                                <td><h:inputText value="#{account.acc.AJob}" /></td>
+                            </tr>
+                            <tr>
+                                <td align="right">Degree</td>
+                                <td><h:inputText value="#{account.acc.ADegree}" /></td>
+                            </tr>
+                            <tr>
+                                <td align="right">Job Address</td>
+                                <td><h:inputText value="#{account.acc.AJobAdd}" /></td>
+                            </tr>
+                            <tr>
+                                <td align="right"></td>
+                                <td>
+                                    <h:commandButton action="#{account.AddNewAccount()}" value="Register" onclick="checkForm();" type="submit"/>
+                                    <input type="reset" value="Cancel"/>
+                                    <h:outputLabel value="#{account.message}"/>
+                                </td>
+                            </tr>                            
+                        </table>                            
+                    </fieldset>    
+                     
+                </h:form>    
                     
             </ui:define>
-
         </ui:composition>
-
-    </body>
+    </body>    
 </html>
