@@ -26,5 +26,6 @@ public class RequestsFacade extends AbstractFacade<Requests> {
     public RequestsFacade() {
         super(Requests.class);
     }
+        
     
 }
