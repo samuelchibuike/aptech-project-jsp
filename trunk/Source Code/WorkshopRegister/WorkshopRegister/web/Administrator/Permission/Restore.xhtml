@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../AdminTemplate.xhtml">
+
+            <ui:define name="content">
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        $("#table_show tr:odd").css("background-color","#CCCCCC");
+                        $("#table_show tr:even").css("background-color","#999999");
+                    });
+                </script>
+                <div id="action">
+                    <a href="list.xhtml"> List Permiss </a> | <a href="Restore.xhtml">Restore Permiss</a>
+                </div>
+                <table width="100%" border="0" cellpadding="1" cellspacing="1" style="text-align: center;">
+                    <tr id="table_header_style">
+                        <td>Permissions ID</td>
+                        <td>Permissions Name</td>
+                        <td>Permissions Status</td>
+                        <td>Restore</td>
+                    </tr>             
+                </table>
+                <h:form>                        
+                     <table width="100%" border="0" cellpadding="1" cellspacing="1" style="text-align: center;" id="table_show">
+                        <ui:repeat value="#{permission.listPermiss(false)}" var="lst">
+                        <tr>
+                            <td width="276px"><h:outputText value="#{lst.PID}"/></td>
+                            <td width="336px"><h:outputText value="#{lst.PName}"/></td>
+                            <td width="343px"><h:outputText value="#{lst.PStatus}"/></td>
+                            <td>
+                                <h:commandLink action="#{permission.RestorePermiss(lst.PID)}" value="Restore"/>
+                            </td>
+                        </tr>
+                        </ui:repeat>
+                                                                            
+                    </table>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
