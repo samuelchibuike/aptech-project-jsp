@@ -4,18 +4,57 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 
-    <body>
-
+    <body>        
+        
+            
         <ui:composition template="./../AdminTemplate.xhtml">
 
-            <ui:define name="content">
-                content
-                <form>
-                    <ui:repeat value="#{permission.listPermiss()}" var="lst">
-                        <h:outputText value="#{lst.PName}"/>
-                    </ui:repeat>
-                </form>
-                
+            <ui:define name="content">                
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        $("#table_show tr:odd").css("background-color","#CCCCCC");
+                        $("#table_show tr:even").css("background-color","#999999");
+                    });
+                </script>
+                <h:form>                        
+                    <div id="action">
+                        <a href="../Permission/list.xhtml"> List Permiss </a> | <a href="Restore.xhtml">Restore Permiss</a>
+                    </div>
+                    <div id="addPermiss" style="font-size: 13px;font-weight: bold;padding: 10px 10px 10px 0px;">
+                        <table width="100%">
+                            <tr>
+                                <td align="right" width="500px">Enter Permiss Name</td>
+                                <td>
+                                    <h:inputText value="#{permission.per.PName}"/><h:outputLabel value="#{permission.message}"/>
+                                    <h:commandButton action="#{permission.AddNew()}" value="Add New"/>
+                                </td>                            
+                            </tr>                                                    
+                        </table>                        
+                    </div>
+                    <table width="100%" border="0" cellpadding="1" cellspacing="1" style="text-align: center;">
+                        <tr id="table_header_style">
+                            <td>Permissions ID</td>
+                            <td>Permissions Name</td>
+                            <td>Permissions Status</td>
+                            <td>Block</td>
+                        </tr>             
+                    </table>
+
+                        <table width="100%" border="0" cellpadding="1" cellspacing="1" style="text-align: center;" id="table_show">
+                        <ui:repeat value="#{permission.listPermiss(true)}" var="lst">
+                        <tr>
+                            <td width="285px"><h:outputText value="#{lst.PID}"/></td>
+                            <td width="346px"><h:outputText value="#{lst.PName}"/></td>
+                            <td width="354px"><h:outputText value="#{lst.PStatus}"/></td>
+                            <td>
+                                <h:commandLink action="#{permission.blockPermiss(lst.PID)}" value="Block"/>
+                            </td>
+                        </tr>
+                        </ui:repeat>
+
+                    </table>
+                </h:form>
+                 
             </ui:define>
 
         </ui:composition>
