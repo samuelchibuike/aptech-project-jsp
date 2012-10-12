@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:t="http://java.sun.com/jsp/jstl/core">
+
+    <body>
+
+        <ui:composition template="./UserTemplate.xhtml">
+
+            <ui:define name="content">
+                <h:form>                                   
+                    <h:outputLabel value="#{presentation.pre.prTitle}"/><br/>
+                    <h:outputLabel value="#{presentation.pre.prSummary}"/><br/>
+                    <h:outputLabel value="#{presentation.pre.prContent}"/><br/>
+                    <h:outputLabel value="#{presentation.pre.prCost}"/><br/>   
+                    <h:outputLabel value="#{requestBean.message}"/>
+                    <t:if test="${sessionScope['userName'] != null}">
+                        <h:commandButton value="Join" action="#{requestBean.JoinPresentation(presentation.pre.prID)}"/>                    
+                    </t:if>                    
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

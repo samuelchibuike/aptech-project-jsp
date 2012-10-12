@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:t="http://java.sun.com/jsp/jstl/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <body>
+
+        <ui:composition template="./UserTemplate.xhtml">
+
+            <ui:define name="content">
+                 <t:if test="${sessionScope['userName'] == null}">
+                    Please Login
+                 </t:if>
+                <t:if test="${sessionScope['userName'] != null}">
+                    
+                 
+                
+                    <h:form>
+                        <table>
+                            <tr>
+                                <td>
+                                    Title: 
+                                </td>
+                                <td>
+                                    <h:inputText id="txtTitle" required="true" requiredMessage="Title not empty" value="#{presentation.pre.prTitle}"/>
+                                    <h:message for="txtTitle" style="color: Red"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Summary: 
+                                </td>
+                                <td>
+                                    <h:inputText id="txtSummary" required="true" requiredMessage="Summary not empty" value="#{presentation.pre.prSummary}"/>
+                                    <h:message for="txtSummary" style="color: Red"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Content: 
+                                </td>
+                                <td>
+                                    <h:inputTextarea id="txtContent" required="true" requiredMessage="Content not empty" value="#{presentation.pre.prContent}"/>
+                                    <h:message for="txtContent" style="color: Red"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Address:  
+                                </td>
+                                <td>
+                                    <h:inputText id="txtAdd" required="true" requiredMessage="Address not empty" value="#{presentation.pre.prAdd}"/>
+                                    <h:message for="txtAdd" style="color: Red"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Price: 
+                                </td>
+                                <td>
+                                    <h:inputText id="txtCost" required="true" requiredMessage="Price not empty" value="#{presentation.pre.prCost}"/>
+                                    <h:message for="txtCost" style="color: Red"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h:commandButton  value="Submit" action="#{presentation.add()}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h:outputLabel value="#{presentation.message}"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </h:form>
+                </t:if>    
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

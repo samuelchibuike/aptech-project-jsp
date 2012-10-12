@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+
+        <ui:composition template="./UserTemplate.xhtml">
+
+            <ui:define name="content"> 
+                <h:form>
+                    <table style="width: 100%">
+                        <tr>
+                            <td>
+                        <ui:repeat value="#{presentation.listPresen()}" var="lst">
+                            <div style="border-bottom: 3px solid silver; height: 40px; background-color:white ; border-radius: 10px">
+                                <div style="width: 450px; float: left;padding-left: 15px; line-height: 40px; font-weight: bold; ">
+                                    <h:outputLabel value="#{lst.prID}"/>
+                                    <h:commandLink value="#{lst.prTitle}" action="#{presentation.findId(lst.prID)}" style="color: #3071a5"/><br/>
+                                </div>
+                            </div>
+                        </ui:repeat>
+                                </td>
+                            </tr>
+                    </table>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

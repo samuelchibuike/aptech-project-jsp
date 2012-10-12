@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+
+        <ui:composition template="./UserTemplate.xhtml">
+
+            <ui:define name="content">
+                <h:form>
+                    <fieldset>
+                        <legend>Change Information</legend>
+                        <table width="100%" border="0" cellpadding="3" cellspacing="4"> 
+                            <tr>
+                                <td align="right" width="300px">Tell</td>
+                                <td>
+                                    <h:inputText value="#{account.acc.ATel}"/>
+                                </td>
+                            </tr>                        
+                            <tr>
+                                <td align="right">Address</td>
+                                <td>
+                                    <h:inputText value="#{account.acc.AAdd}"/>
+                                </td>
+                            </tr>                        
+                            <tr>
+                                <td align="right">Job</td>
+                                <td>
+                                    <h:inputText value="#{account.acc.AJob}"/>
+                                </td>                                 
+                            </tr>                        
+                            <tr>
+                                <td align="right">Degree</td>
+                                <td>
+                                    <h:inputText value="#{account.acc.ADegree}"/>
+                                </td>
+                            </tr>                        
+                            <tr>
+                                <td align="right">Job Add</td>
+                                <td>
+                                    <h:inputText value="#{account.acc.AJobAdd}"/>
+                                </td>
+                            </tr>      
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <h:outputLabel value="#{account.message}"/>
+                                    <h:commandButton action="#{account.UpdateInfor()}" value="Change Infor"/>                                    
+                                </td>
+                            </tr>                        
+                        </table>
+                    </fieldset>                                        
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
